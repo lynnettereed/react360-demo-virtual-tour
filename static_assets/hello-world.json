@@ -1,0 +1,204 @@
+{
+	"name":"Michelle's VR App",
+	"defaults":{
+		"heroes": {
+      "src": "kitchen.jpg",
+      "width": 2,
+      "height": 2
+    },
+		"infos":{
+			"icon":"icons/white-circle.png"
+		}
+	},
+	"firstSceneId":"Kitchen",
+	"scenes":[
+		{
+			"id":"Kitchen",
+			"photopanos":[
+				{"src":"kitchen.jpg","rotateY":320}
+			],
+			"navs":[
+				{"to":"Bedroom","txt":"Bedroom","textColor": "black","rotateY":222, "backgroundGaze": "#88888800"},
+				{"to":"Patio","txt":"Patio","textColor": "black","rotateY":290, "backgroundGaze": "#88888800"}
+			],
+
+
+						"videos":[
+			  {
+					"src":"video1.mp4",
+
+					"imgWidth":400,
+        "imgHeight":210,
+        "cmWidth":0.606,
+        "rotateY":82.9,
+				 "pretransform":[
+			 {"translate": [299, 40, -490]}, {"rotateY":325}]
+			}
+		],
+
+
+			"preloads":[
+				{"src":"kitchen.jpg"},
+				{"src":"outside.JPG"}
+			]
+		},
+		{
+			"id":"Patio",
+			"photopanos":[
+				{"src":"outside.jpg","rotateY":900}
+			],
+            "navs":[
+                {"to":"Bedroom","txt":"To \n The Bedroom","rotateY":15,"rotateX":6,
+                	"nextRotateY":110,
+                	"icon":"icons/white-circle.png","iconWidth":0.5,"iconHeight":0.5,
+									"backgroundGaze": "#88888800",
+									"textColor":"black"
+				},
+
+					{"to":"Kitchen","txt":"Back to \n the kitchen","textColor": "black","rotateY":100, "backgroundColor": "white", "backgroundGaze": "white"}
+
+
+            ],
+
+
+			"infos":[
+				{
+					"card":[
+						{"type":"content","txt":"Hello there.","textColor":"white","fontSize":0.5}
+
+					],
+					"width":3,
+					"rotateY":154,
+					"rotateX":2,
+					"iconTranslateZ": -4,
+					"cardTranslateZ":-4,
+					"icon":"icons/cube.png","iconWidth":0.5,"iconHeight":0.5,
+					"backgroundColor":"#00000000"
+				},
+
+				{
+					"card":[
+						{"type":"video","src":"wine.mp4","ratio":1.7},
+						{"type":"content","txt":"This is another video, but this one is on a card, floating in the air...","textColor":"white","fontSize":0.18},
+						{"type":"content","txt":"...like a magic carpet video.","textColor":"white","fontSize":0.1}
+					],
+					"width":2,
+					"backgroundColor":"#5273a9",
+					"icon":"icons/video-icon.png",
+					"iconWidth":0.5,
+					"iconHeight":0.5,
+					"rotateY":230,
+					"rotateX":9,
+					"cardTranslateZ":-5,
+					"cardBorderWidth": 0.1
+				}
+
+			],
+
+
+
+			"preloads":[
+				{"src":"outside.JPG"}
+			]
+		},
+		{
+			"id":"Bedroom",
+			"photopanos":[
+				{"src":"bedroom.jpg","rotateY":0}
+			],
+
+			"navs":[
+				{"to":"Patio","txt":"To the patio","textColor": "black","rotateY":350, "backgroundGaze": "#88888800"}
+			],
+
+
+            "infos":[
+                {
+	                "card":[
+                        {"type":"image","src":"cat.jpg","ratio":1.9,"borderWidth":0},
+                        {"type":"header","txt":"More info"},
+						{"type":"content","txt":"Everything is built with React 360 (a JavaScript framework for the creation of 3D and VR user interfaces)"},
+						{"type":"content","txt":"Other things that can be added: \n - 360 Videos as 'scenes' \n - Music or background noise like waves or birds for each scene \n - Control panel and navigation bar with preview of scenes \n - 3D renderings instead of photos (for a virtual environment) \n - Basically anything."},
+						{"type":"content","txt":"Thanks"},
+							{"type":"content","txt":"Michelle"},
+                        {"type":"row","buttons":[
+							{"txt":"E-mail","uri":"mailto:michellekoegelenberg@gmail.com"},
+							{"txt":"Call","uri":"tel:0724471580"}
+                        ]}
+	                ],
+	                "width":3.5,
+	                "backgroundColor":"#ffffffee",
+	                "rotateY":160,
+	                "rotateX":-10,
+									"icon":"icons/cube.png","iconWidth":0.5,"iconHeight":0.5
+                },
+
+						  {
+						    "card":[
+						      {"type":"header","txt":"Welcome to the \n   BEDROOM", "textColor":"black"}
+						    ],
+						    "stick":true,
+						    "backgroundColor":"#88888800",
+								"fontSize": "20",
+						    "pretransform":[ {"translate": [-0.2, 0.12, 0]}, {"rotateY": 0} ],
+						    "rotateY":-155
+						  },
+
+							{
+						    "card":[
+						      {"type":"content","txt":"Okay this is a \n different bedroom. \n I ran out of images", "textColor":"black","fontSize":0.09}
+						    ],
+						    "stick":true,
+						    "backgroundColor":"#88888800",
+								"fontSize": "20",
+						    "pretransform":[ {"translate": [-0.05, 0.12, 0]}, {"rotateY": 0} ],
+						    "rotateY":-66
+						  },
+
+							{
+								"card":[
+									{"type":"content","txt":"Okay, this is a \n different bedroom. \n I ran out of images", "textColor":"black", "fontSize":0.09}
+								],
+								"stick":true,
+								"backgroundColor":"#88888800",
+								"fontSize": "20",
+								"pretransform":[ {"translate": [-0.2, 0.4, 8]}, {"rotateY": 20} ],
+ 							 "rotateY":-113
+						 },
+
+						 {
+						 "card":[
+	 						{"type":"content","txt":"------------------------------------------------------------------------------------------------------------ 6m","textColor":"white","fontSize":0.5}
+
+	 					],
+	 					"width":18,
+						"pretransform":[ {"translate": [-1, 2, -9]}, {"rotateY": -32} ],
+						"rotateY":-71.5,
+						"rotateX": 7.1,
+	 					"iconTranslateZ": -3,
+	 					"cardTranslateZ":-4,
+	 					"icon":"icons/tape.png","iconWidth":0.5,"iconHeight":0.5,
+	 					"backgroundColor":"#00000000"
+	 				}
+						],
+
+						"videos":[
+			  {
+					"src":"video1.mp4",
+
+					"cmWidth":0.48,
+					"imgHeight": 0.52,
+					"rotateY":43,
+					"rotateX": 0,
+				 "pretransform":[
+			 {"translate": [301, -171, -295]}, {"rotateY":403}]
+			}
+		],
+
+
+			"preloads":[
+				{"src":"bedroom.JPG"}
+			]
+		}
+	]
+}
